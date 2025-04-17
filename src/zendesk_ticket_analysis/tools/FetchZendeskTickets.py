@@ -68,9 +68,9 @@ class ZendeskTicketSearchTool(BaseTool):
 
         # Load environment variables
         load_dotenv()
-        zendesk_subdomain = os.getenv("zendesk_subdomain")
-        zendesk_email = os.getenv("zendesk_email")
-        zendesk_api_key = os.getenv("zendesk_api_key")
+        zendesk_subdomain = os.getenv("ZENDESK_SUBDOMAIN")
+        zendesk_email = os.getenv("ZENDESK_EMAIL")
+        zendesk_api_key = os.getenv("ZENDESK_API_KEY")
 
         if not zendesk_subdomain or not zendesk_email or not zendesk_api_key:
             raise ValueError("Zendesk API credentials are not properly set.")
